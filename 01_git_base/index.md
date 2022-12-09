@@ -42,6 +42,7 @@ git add README.md
 ### 6. 状态简览
 
 ```shell
+# git status --short
 git status -s
 ```
 
@@ -65,4 +66,18 @@ git diff --staged
 
 ```shell
 git commit
+git commit -m ''
+```
+
+### 10. 跳过使用暂存区
+
+```shell
+git commit -a -m ''
+```
+
+### 11. 移除文件
+
+```shell
+# 准确的说是从暂存区移除文件
+git rm PROJECTS.md
 ```
