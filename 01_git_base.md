@@ -73,13 +73,35 @@ git commit -m ''
 
 ```shell
 git commit -a -m ''
+git commit -am ''
 ```
 
 ### 11. 移除文件
 
 ```shell
-# 准确的说是从暂存区移除文件
+# 从暂存区和工作目录一起删除文件
 git rm PROJECTS.md
+
+# 仅从暂存区删除文件
+git rm --cached PROJECTS.md
+
+# ps: 删除文件夹 需要加 -r
+# ps: 对于已加入缓存区并且后续又进行修改过的文件，需要加-f，强制删除
 ```
 
-### 12. 
+### 12. 移动文件(改名)
+
+```shell
+git mv index.md index1.md
+
+# 其实，运行 git mv 相当于运行了下面三条命令：
+mv index.md index1.md
+git rm index.md
+git add index1.md
+```
+
+### 13. 查看提交历史
+
+```shell
+git log
+```
