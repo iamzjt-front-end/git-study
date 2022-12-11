@@ -123,3 +123,11 @@ git log --pretty=format:"%h - %an, %ar : %s"
 # --graph 展示分支、合并历史
 git log --pretty=format:"%h $s" --graph
 ```
+
+### 13. 撤销操作
+
+```shell
+git commit --amend
+```
+
+### 14. 
