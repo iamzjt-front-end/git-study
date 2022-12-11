@@ -104,4 +104,22 @@ git add index1.md
 
 ```shell
 git log
+
+# 可以显示出每次提交的差异
+git log -p
+
+# 也可以加上-2显示最近两次提交
+git log -p -2
+
+# 附带有总结
+git log --stat
+
+# --pretty 可以指定使用不同于默认格式的方式展示提交历史
+git log --pretty=oneline
+
+# --pretty=format:"" 定制要显示的记录格式
+git log --pretty=format:"%h - %an, %ar : %s"
+
+# --graph 展示分支、合并历史
+git log --pretty=format:"%h $s" --graph
 ```
